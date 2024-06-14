@@ -1,4 +1,4 @@
-<?if(isset($_POST['query'])){?>
+<?if(isset($_POST['query'])&& !empty($_POST['query'])){?>
 <div class="container mt-3">
     <h3>Search Results:</h3>
     <div id="results">

@@ -92,9 +92,27 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+        }
+        footer {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: #f8f9fa;
+            margin-top: auto; /* Push footer to the bottom */
+            width: 100%; /* Full width footer */
+        }
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="headers.css" rel="stylesheet">
+    <!-- <link href="../css/headers.css" rel="stylesheet"> -->
   </head>
