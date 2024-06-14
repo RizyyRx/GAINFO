@@ -14,7 +14,7 @@
   </div>
   <div class="px-3 py-2 border-bottom mb-3">
     <div class="container d-flex flex-wrap justify-content-center">
-      <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto d-flex" method="POST" action="searchResult.php" role="search">
+      <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto d-flex" method="POST" action="index.php" role="search">
         <input type="search" name="query" class="form-control" placeholder="Search..." aria-label="Search">
         <button type="submit" class="btn btn-primary ms-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

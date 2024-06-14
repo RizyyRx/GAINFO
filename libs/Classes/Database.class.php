@@ -15,7 +15,6 @@ class Database{
                 die("connection failed".$connection->connect_error);
             }
             else{
-                print("connected successfully");
                 Database::$conn=$connection;
                 return Database::$conn;
             }

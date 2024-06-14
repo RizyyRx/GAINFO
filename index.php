@@ -9,8 +9,15 @@ include "libs/load.php";
 
 <main>
   <?load_template("_header");?>
+<?if(isset($_POST['query'])&& !empty($_POST['query'])){
   
-  <?load_template("_searchResult");?>
+  load_template("_searchResult");
+}
+else{
+  load_template("_main");
+}
+
+?>
 
 </main>
 <?load_template("_footer");?> 

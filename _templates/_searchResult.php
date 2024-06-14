@@ -9,10 +9,19 @@
             $result=$conn->query($sql);
             
             if($result->num_rows>0){
-                echo "<ul class='list-group'>";
+                echo "<ul class='list-group' >";
               // Output data of each row
               while($row = $result->fetch_assoc()) {
-                  echo "<li class='list-group-item'>Product ID: " . $row["id"]. " - Name: " . $row["name"]. " - Price: " . $row["price"]. " - Description: " . $row["description"]. " - Specifications: " . $row["specifications"]. "</li>";
+                echo "<li class='list-group-item mb-5 bg-dark text-white'>";
+                echo "<div class='text-center' style='font-size: 1.5rem;'>" . $row["name"] . "</div><hr>";
+                if (!empty($row["image_url"])) {
+                    echo "<div class='text-center mt-3'><img src='" . $row["image_url"] . "' alt='" . $row["name"] . "' style='max-width: 300px;'></div>";
+                }
+                echo "<hr>";
+                echo "<div>Price: " . $row["price"] . "</div><hr>";
+                echo "<div>Description: " . $row["description"] . "</div><hr>";
+                echo "<div>Specifications: " . $row["specifications"] . "</div>";
+                echo "</li>";
               }
               echo "</ul>";
             }
