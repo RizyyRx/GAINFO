@@ -1,13 +1,17 @@
-<?if(isset($_POST['query'])&& !empty($_POST['query'])){?>
+
 <div class="container mt-3">
     <h3>Search Results:</h3>
     <div id="results">
         <?
             $conn=Database::getConnection();
+
+            //query based on user input which is set on $_POST['query']
             $query_name=$_POST['query'];
             $sql="SELECT * FROM `products` WHERE `name` LIKE '%$query_name%'";
+
             $result=$conn->query($sql);
             
+            //list all the matching results
             if($result->num_rows>0){
                 echo "<ul class='list-group' >";
               // Output data of each row
@@ -34,4 +38,3 @@
         ?>
     </div>
 </div>
-<?}?>
